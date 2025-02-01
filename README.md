@@ -3,7 +3,7 @@
 This is the official website for the Association Mosquée Thonon, built with React and Vite.
 
 ## Features
-
+this is a test
 - Prayer times display
 - Information about mosque activities
 - New mosque construction project details
