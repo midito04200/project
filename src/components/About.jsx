@@ -8,7 +8,9 @@ export default function About() {
             À propos de nous
           </h2>
           <p className="text-gray-600">
-            L'Association Mosquée de Thonon est un lieu de culte et de rassemblement pour la communauté musulmane de Thonon-les-Bains, dédié à la prière, l'apprentissage et le partage. Depuis sa création, elle répond aux besoins spirituels et sociaux des fidèles en proposant des services variés : prières quotidiennes, école coranique, cours d'arabe, célébrations religieuses, et accompagnement spirituel. L'association s'engage à promouvoir les valeurs de paix, respect, et fraternité, tout en organisant des événements culturels et sociaux pour enrichir la vie communautaire. Elle encourage également le dialogue interreligieux et soutient des actions caritatives et humanitaires.
+          Un Lieu de Foi, d’Enseignement et de Partage
+          La Mosquée de l’Association des Musulmans de Thonon est un lieu de culte et de rassemblement pour la communauté musulmane de Thonon-les-Bains, dédié à la prière, l'apprentissage et le partage. Depuis sa création, elle répond aux besoins spirituels et sociaux des fidèles en proposant des services variés : prières quotidiennes, école coranique, cours d'arabe, célébrations religieuses, et accompagnement spirituel.
+          L'association s'engage à promouvoir les valeurs de paix, respect, et fraternité, tout en organisant des événements culturels et sociaux pour enrichir la vie communautaire. Elle encourage également le dialogue interreligieux et soutient des actions caritatives et humanitaires.
           </p>
         </div>
 
