@@ -52,6 +52,9 @@ npm run build
 
 Please read our contributing guidelines before submitting pull requests.
 
+## deployment
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72512ad0-10dc-495b-a211-0bc4d040bd05/deploy-status)](https://app.netlify.com/sites/amt-thonon/deploys)
 ## License
 
 This project is private and confidential. All rights reserved.
+
