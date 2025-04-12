@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    https: true,
+    https: false, // change to false or remove this line entirely
     proxy: {
       '/api': {
         target: 'http://localhost:3000',
@@ -12,7 +12,8 @@ export default defineConfig({
         secure: false,
       }
     }
-  },
+  }
+  ,
   build: {
     sourcemap: false, // Disable source maps in production
     rollupOptions: {
