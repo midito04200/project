@@ -13,7 +13,7 @@ export default function Activities() {
   useEffect(() => {
     if (!loading && activities && activitiesRef.current) {
       const cards = activitiesRef.current.querySelectorAll('.activity-card');
-      
+
       gsap.fromTo(cards,
         {
           opacity: 0,
@@ -43,7 +43,7 @@ export default function Activities() {
             Nos Activités
           </h2>
           <p className={`${textStyles.body.fontSize} ${textStyles.body.fontFamily} text-gray-600`}>
-            Découvrez les activités régulières de notre mosquée
+            Découvrez les activités régulières de notre association
           </p>
         </div>
 
@@ -60,8 +60,8 @@ export default function Activities() {
                 className="activity-card bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex justify-center mb-6">
-                  <div 
-                    dangerouslySetInnerHTML={{ __html: icons[activity.icon] || activity.icon }} 
+                  <div
+                    dangerouslySetInnerHTML={{ __html: icons[activity.icon] || activity.icon }}
                     className="w-16 h-16 text-primary-green"
                   />
                 </div>
