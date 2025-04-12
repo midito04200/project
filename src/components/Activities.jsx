@@ -56,12 +56,12 @@ export default function Activities() {
           ) : (
             activities?.map((activity) => (
               <div
-                key={activity.id}
+                key={activity.title} // Using title as a unique key since it should be unique for each activity
                 className="activity-card bg-white p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex justify-center mb-6">
                   <div 
-                    dangerouslySetInnerHTML={{ __html: icons[activity.iconKey] || activity.icon }} 
+                    dangerouslySetInnerHTML={{ __html: icons[activity.icon] || activity.icon }} 
                     className="w-16 h-16 text-primary-green"
                   />
                 </div>

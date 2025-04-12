@@ -86,6 +86,7 @@ export default function DonationSlider({ opacity = 0.92 }) {
     <div 
       ref={containerRef} 
       className="absolute inset-0 overflow-hidden"
+      style={{ perspective: '2000px' }}
     >
       {quranPages.map((page, index) => (
         <div
@@ -100,7 +101,7 @@ export default function DonationSlider({ opacity = 0.92 }) {
           <div 
             className="w-full h-full"
             style={{
-              backgroundImage: `linear-gradient(rgba(255, 255, 255, ${opacity}), rgba(255, 255, 255, ${opacity})), url(${page})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url(${page})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'

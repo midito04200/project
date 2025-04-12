@@ -1,114 +1,194 @@
-import { useContent } from '../hooks/useContent';
-import DonationSlider from './DonationSlider';
+import React from 'react';
 
 export default function NewMosqueProject() {
-  const { data: project, loading } = useContent('mosque-project');
-
-  if (loading) {
-    return <div>Chargement du projet...</div>;
-  }
+  const qrCodeUrl = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https%3A%2F%2Fsumup.link%2Famt-thonon";
 
   return (
     <div className="py-20">
-      {/* Hero Section with Animated Background */}
-      <div className="relative h-[500px] mb-16">
-        <DonationSlider opacity={0.85} />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center text-gray-800">
-            <h2 className="text-5xl font-amiri mb-4">Centre Culturel du Chablais (CCC)</h2>
-            <p className="text-xl max-w-2xl mx-auto">
-              Un espace moderne dédié à l'échange, l'apprentissage et le partage au cœur du Chablais
+      {/* Header Section */}
+      <div className="text-center mb-20">
+        {/* Decorative Icon */}
+        <div className="flex justify-center mb-8">
+          <svg className="w-16 h-16 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+          </svg>
+        </div>
+        <h2 className="text-4xl font-bold mb-4">Centre Culturel du Chablais</h2>
+      </div>
+
+      {/* First Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex-1">
+            <h3 className="text-3xl font-bold mb-6">Un Espace Adapté aux Besoins Croissants</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Avec le développement démographique de Thonon-Les-Bains et du Chablais dans son ensemble, la nécessité d'un espace plus adapté aux besoins des fidèles devient une évidence. Les locaux actuels, malgré plusieurs ajustements, ne suffisent plus à accueillir les nombreux pratiquants, notamment lors des prières du vendredi et du mois de Ramadan. Face à cet afflux croissant, nous devons aujourd'hui repenser notre lieu de culte pour offrir un cadre plus spacieux, fonctionnel et accueillant.
             </p>
+          </div>
+          <div className="flex-1">
+            <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400">Image à venir</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Project Image */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <div className="relative group cursor-pointer">
-            <img
-              src="https://myalgeria.com/wp-content/uploads/2020/11/24.jpg"
-              alt="Façade du Centre Culturel du Chablais"
-              className="w-full h-auto rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = 'https://via.placeholder.com/800x600?text=Image+non+disponible';
-              }}
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-lg" />
+      {/* Donation Section */}
+      <div className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
+            <p className="text-xl text-gray-600">Soutenez notre projet de centre culturel</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {/* Bank Transfer Section */}
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold mb-8 text-primary-green">Par virement bancaire</h2>
+              
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Titulaire du compte</h3>
+                  <p className="text-xl">ASSOC. LES MUSULMANS DE THONON</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Banque</h3>
+                  <p className="text-xl">CA DES SAVOIE - THONON CONCORDE</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">IBAN</h3>
+                  <p className="text-xl font-mono">FR76 1810 6000 4896 7237 7517 275</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">BIC/SWIFT</h3>
+                  <p className="text-xl font-mono">AGRIFRPP881</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Adresse</h3>
+                  <p className="text-xl">2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Credit Card Section */}
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
+              
+              <div className="space-y-8">
+                <p className="text-xl">
+                  Scannez le QR code ci-dessous pour faire<br />
+                  un don sécurisé par carte bancaire via SumUp
+                </p>
+
+                <div className="flex justify-center">
+                  <div className="p-4 bg-white rounded-lg shadow-md border-2 border-primary-green/20">
+                    <img 
+                      src={qrCodeUrl}
+                      alt="QR Code SumUp"
+                      className="w-64 h-64"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <a
+                    href="https://sumup.link/amt-thonon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-primary-green text-white px-8 py-3 rounded-lg hover:bg-secondary-green transition-colors duration-300"
+                  >
+                    Faire un don avec SumUp
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Donation Methods */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* Bank Transfer Details */}
-          <div className="bg-white p-8 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center justify-center mb-6">
-              <svg className="w-16 h-16 text-primary-green" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M9 3v4M15 3v4" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-amiri text-primary-green mb-6 text-center">Faire un don par virement bancaire</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-semibold">Titulaire du compte:</p>
-                <p>ASSOC. LES MUSULMANS DE THONON</p>
-              </div>
-              <div>
-                <p className="font-semibold">Banque:</p>
-                <p>CA DES SAVOIE - THONON CONCORDE</p>
-              </div>
-              <div>
-                <p className="font-semibold">IBAN:</p>
-                <p className="font-mono bg-gray-50 p-2 rounded">FR76 1810 6000 4896 7237 7517 275</p>
-              </div>
-              <div>
-                <p className="font-semibold">BIC/SWIFT:</p>
-                <p className="font-mono bg-gray-50 p-2 rounded">AGRIFRPP881</p>
-              </div>
-              <div>
-                <p className="font-semibold">Adresse:</p>
-                <p>2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS</p>
-              </div>
+      {/* Second Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+          <div className="flex-1">
+            <h3 className="text-3xl font-bold mb-6">Un Centre de Savoir et de Transmission</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Ce projet ne se limite pas à un simple lieu de prière. Il ambitionne de créer un véritable centre de vie et de transmission du savoir, où chacun pourra approfondir sa connaissance de l'Islam, apprendre la langue arabe, et se former aux valeurs essentielles de la spiritualité et du vivre-ensemble.
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400">Image à venir</span>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Card Payment */}
-          <div className="bg-white p-8 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl">
-            <div className="flex items-center justify-center mb-6">
-              <svg className="w-16 h-16 text-primary-green" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h.01M11 15h2M6 6h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2z" />
-              </svg>
+      {/* Third Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex-1">
+            <h3 className="text-3xl font-bold mb-6">Un Lieu de Foi, de Partage et de Dialogue</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Le centre culturel sera un espace de sérénité et d'échange, où la foi se conjugue avec l'éducation et la convivialité. En plus des prières quotidiennes, il accueillera des conférences, des rencontres culturelles et des moments de partage, favorisant ainsi le dialogue et l'unité au sein de la communauté.
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400">Image à venir</span>
             </div>
-            <h3 className="text-2xl font-amiri text-primary-green mb-6 text-center">Faire un don par carte bancaire</h3>
-            <div className="flex flex-col items-center space-y-4">
-              <p className="text-gray-600 mb-4 text-center">
-                Cliquez sur le bouton ci-dessous pour faire un don sécurisé par carte bancaire
-              </p>
-              <a
-                href="https://sumup.link/amt-thonon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary-green text-white px-6 py-3 rounded-lg hover:bg-secondary-green transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 shadow-lg hover:shadow-xl"
-              >
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </div>
+        </div>
+      </div>
+
+      {/* Fourth Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+          <div className="flex-1">
+            <h3 className="text-3xl font-bold mb-6">Un Engagement pour l'Avenir</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Ce projet est une réponse à un besoin réel et un engagement pour l'avenir. Ensemble, construisons un lieu où chaque personne pourra pratiquer sa foi avec dignité, apprendre, échanger et s'épanouir pleinement dans un environnement propice à la paix et à la fraternité.
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400">Image à venir</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Statistics Section */}
+      <div className="bg-gray-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Surface */}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <svg className="w-12 h-12 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2zm-4 4h2v2h-2zm0-4h2v2h-2zm-4 8h2v2H9zm0-8h2v2H9zm10-6H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
                 </svg>
-                Faire un don avec carte bancaire
-              </a>
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Surface totale</h4>
+              <p className="text-5xl font-bold mb-2">2000</p>
+              <p className="text-xl">m²</p>
+            </div>
+
+            {/* Capacity */}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <svg className="w-12 h-12 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Capacité d'accueil</h4>
+              <p className="text-5xl font-bold mb-2">2000</p>
+              <p className="text-xl">personnes</p>
             </div>
           </div>
-        </div>
-
-        {/* Project Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {project?.features.map((feature) => (
-            <div key={feature.id} className="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <p className="text-lg text-gray-800">{feature.text}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>

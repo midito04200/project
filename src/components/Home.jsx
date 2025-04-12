@@ -20,85 +20,43 @@ export default function Home() {
       { opacity: 1, y: 0, duration: 0.8 },
       '-=0.5'
     )
-    .fromTo(heroRef.current.querySelectorAll('.hero-button'),
-      { opacity: 0, y: 20, rotateX: -15 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        rotateX: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "back.out(1.7)"
-      },
+    .fromTo(heroRef.current.querySelector('.hero-button'),
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" },
       '-=0.3'
     );
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const scrollToDonation = () => {
+    const donationSection = document.getElementById('faire-un-don');
+    if (donationSection) {
+      donationSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const buttonStyles = `
-    ${textStyles.body.fontFamily}
-    ${textStyles.body.fontSize}
-    py-3 px-6
-    rounded-full
-    bg-primary-green
-    text-white
-    border-2
-    border-secondary-green
-    shadow-lg
-    transform
-    transition-all
-    duration-300
-    hover:shadow-xl
-    hover:-translate-y-1
-    focus:outline-none
-    focus:ring-2
-    focus:ring-primary-green
-    focus:ring-opacity-50
-  `;
 
   return (
     <div>
       {/* Hero Section */}
       <div 
         ref={heroRef}
-        className="relative h-[600px] flex items-center justify-center"
+        className="relative min-h-screen flex items-center justify-center"
       >
         <DonationSlider opacity={0.4} />
         
         {/* Content */}
-        <div className="relative z-10 text-gray-800 text-center px-4 max-w-4xl mx-auto">
-          <h1 className={`${textStyles.h1.fontSize} ${textStyles.h1.fontWeight} ${textStyles.h1.fontFamily} mb-6`}>
-            Association Musulmans de Thonon
+        <div className="relative z-10 text-white text-center px-4 max-w-4xl mx-auto mt-24">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            L'Association des Musulmans<br />de Thonon
           </h1>
-          <p className={`${textStyles.body.fontSize} ${textStyles.body.fontFamily} mb-12 text-xl md:text-2xl`}>
-            L'Association Musulmans de Thonon vous accueille pour les cinq prières quotidiennes
+          <p className="text-2xl md:text-3xl mb-12">
+            vous accueille pour les cinq prières quotidiennes
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => scrollToSection('horaires')}
-              className={`hero-button ${buttonStyles}`}
-            >
-              Horaires des prières
-            </button>
-            <button
-              onClick={() => scrollToSection('activites')}
-              className={`hero-button ${buttonStyles}`}
-            >
-              Nos activités
-            </button>
-            <button
-              onClick={() => scrollToSection('projet-mosquee')}
-              className={`hero-button ${buttonStyles}`}
-            >
-              Faire un don
-            </button>
-          </div>
+          <button 
+            onClick={scrollToDonation}
+            className="hero-button bg-[#E6C86E] text-primary-green px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#d4b75d] transition-colors duration-300"
+          >
+            FAIRE UN DON
+          </button>
         </div>
       </div>
 

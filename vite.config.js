@@ -1,26 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5173,
-    strictPort: true,
-    host: true
-  },
-  preview: {
-    port: 4173,
-    host: true
+    https: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
   },
   build: {
-    sourcemap: false,
+    sourcemap: false, // Disable source maps in production
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom']
-        }
-      }
-    }
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
   }
 })

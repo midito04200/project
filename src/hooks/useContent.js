@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { mockData } from '../lib/mockData';
+import { getContent, getAllContent } from '../lib/cms';
 
-export function useContent(contentType, id = null) {
+export function useContent(collection, slug) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -10,16 +10,14 @@ export function useContent(contentType, id = null) {
     const fetchContent = async () => {
       try {
         setLoading(true);
-        // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 100));
+        console.log(`Fetching content for ${collection}${slug ? `/${slug}` : ''}`);
         
-        if (id) {
-          const items = mockData[contentType];
-          const item = items?.find(item => item.id === id);
-          setData(item || null);
-        } else {
-          setData(mockData[contentType] || null);
-        }
+        const content = slug 
+          ? await getContent(collection, slug)
+          : await getAllContent(collection);
+          
+        console.log(`Content fetched for ${collection}:`, content);
+        setData(content);
       } catch (err) {
         setError(err);
         console.error('Error fetching content:', err);
@@ -29,7 +27,7 @@ export function useContent(contentType, id = null) {
     };
 
     fetchContent();
-  }, [contentType, id]);
+  }, [collection, slug]);
 
   return { data, loading, error };
 }

@@ -2,7 +2,7 @@ export const mockData = {
   'prayer-times': [
     { id: 1, name: 'Fajr', time: '06:46', arabic: 'الفجر' },
     { id: 2, name: 'Sunrise', time: '08:16', arabic: 'الشروق' },
-    { id: 3, name: 'Dhuhr', time: '12:41', arabic: 'الظهر' },
+    { id: 3, name: 'Dhuhr', time: '13:00', arabic: 'الظهر' },
     { id: 4, name: 'Asr', time: '15:22', arabic: 'العصر' },
     { id: 5, name: 'Maghrib', time: '17:07', arabic: 'المغرب' },
     { id: 6, name: 'Isha', time: '18:37', arabic: 'العشاء' }
@@ -12,13 +12,13 @@ export const mockData = {
       id: 1,
       title: 'Ramadan 1445',
       date: '11 Mars 2024',
-      description: 'Le mois sacre du Ramadan commence le 11 mars 2024, sous reserve de l\'observation du croissant lunaire.'
+      description: 'Le mois sacré du Ramadan commence le 11 mars 2024, sous réserve de l\'observation du croissant lunaire.'
     },
     {
       id: 2,
-      title: 'Aid al-Fitr',
+      title: 'Aïd al-Fitr',
       date: '10 Avril 2024',
-      description: 'La fete marquant la fin du Ramadan, celebree par la priere de l\'Aid et les festivites communautaires.'
+      description: 'La fête marquant la fin du Ramadan, célébrée par la prière de l\'Aïd et les festivités communautaires.'
     }
   ],
   'activities': [
@@ -30,30 +30,30 @@ export const mockData = {
     },
     {
       id: 2,
-      title: 'Ecole Coranique',
+      title: 'École Coranique',
       description: 'Enseignement du Coran avec tajwid pour enfants et adultes',
       iconKey: 'quran'
     },
     {
       id: 3,
-      title: 'Conferences',
-      description: 'Conferences regulieres sur des themes varies',
+      title: 'Conférences',
+      description: 'Conférences régulières sur des thèmes variés',
       iconKey: 'conference'
     },
     {
       id: 4,
-      title: 'Activites Jeunesse',
-      description: 'Activites educatives et recreatives pour les jeunes',
+      title: 'Activités Jeunesse',
+      description: 'Activités éducatives et récréatives pour les jeunes',
       iconKey: 'youth'
     }
   ],
   'mosque-project': {
     id: 1,
-    title: 'Centre Culturel du Chablais',
-    description: 'Un espace moderne dedie a l\'echange, l\'apprentissage et le partage au coeur du Chablais',
+    title: 'Projet Nouvelle Mosquée',
+    description: 'Un nouveau lieu de culte moderne et spacieux pour notre communauté',
     features: [
-      { id: 1, text: 'Surface totale: 1000m2' },
-      { id: 2, text: 'Capacite d\'accueil: 500 personnes' }
+      { id: 1, text: 'Surface totale : 1000m²' },
+      { id: 2, text: 'Capacité d\'accueil : 500 personnes' }
     ],
     bankDetails: {
       accountHolder: 'ASSOC. LES MUSULMANS DE THONON',

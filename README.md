@@ -1,6 +1,6 @@
-# Association des Musulmans de Thonon-les.bains (AMT) Website
+# Association des Musulmans de Thonon (AMT) Website
 
-This is the official website for the Association Mosquée Thonon, built with React and Vite.
+This is the official website for the Association  of Moselems in Thonon-les-bains, built with React and Vite.
 
 ## Features
 

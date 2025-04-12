@@ -1,114 +1,23 @@
-import { useState, useCallback } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-const mapContainerStyle = {
-  width: '100%',
-  height: '400px',
-  borderRadius: '0.5rem'
-};
-
-const MOSQUE_POSITION = {
-  lat: 46.3772565,
-  lng: 6.4910262
-};
-
-const MOSQUE_ADDRESS = "2 Av.de Champagne, 74200 Thonon les bains";
-
-const options = {
-  disableDefaultUI: false,
-  zoomControl: true,
-  mapTypeControl: false,
-  streetViewControl: true,
-  fullscreenControl: true,
-  zoom: 15,
-  mapTypeId: 'roadmap',
-  scrollwheel: true,
-  clickableIcons: false
-};
-
-const libraries = ["places"];
-
-const ContactInfo = () => (
-  <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-    <div className="p-8">
-      <h3 className="text-xl font-bodrum mb-4">Informations de Contact</h3>
-      <div className="space-y-4 text-gray-600">
-        <p>
-          <strong>Adresse :</strong> {MOSQUE_ADDRESS}
-        </p>
-        <p>
-          <strong>Email :</strong> contact@mosqueedethonon.fr
-        </p>
-        <p>
-          <strong>Téléphone :</strong> 01 23 45 67 89
-        </p>
-      </div>
-    </div>
-  </div>
-);
-
-const FallbackMap = () => (
-  <div className="h-full flex flex-col items-center justify-center bg-gray-100 p-8 rounded-lg">
-    <div className="text-center max-w-md">
-      <svg className="w-16 h-16 text-primary-green mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-      <p className="text-gray-600 mb-4">Vous pouvez nous trouver à :</p>
-      <p className="font-medium text-lg mb-6">{MOSQUE_ADDRESS}</p>
-      <a 
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MOSQUE_ADDRESS)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center px-6 py-3 bg-primary-green text-white rounded-lg hover:bg-secondary-green transition-colors duration-200"
-      >
-        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-        Ouvrir dans Google Maps
-      </a>
-    </div>
-  </div>
-);
+import { useState } from 'react';
 
 export default function Contact() {
-  const [mapError, setMapError] = useState(false);
-  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const onLoadError = useCallback(() => {
-    console.error('Google Maps failed to load');
-    setMapError(true);
-  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:contact@mosqueedethonon.fr?subject=Message de ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0ADe: ${formData.name}%0AEmail: ${formData.email}`;
+    window.location.href = mailtoLink;
+  };
 
-  const renderMap = () => {
-    if (!apiKey) {
-      console.error('Google Maps API key is missing');
-      return <FallbackMap />;
-    }
-
-    if (mapError) {
-      return <FallbackMap />;
-    }
-
-    return (
-      <LoadScript 
-        googleMapsApiKey={apiKey}
-        onError={onLoadError}
-        libraries={libraries}
-      >
-        <GoogleMap
-          mapContainerStyle={mapContainerStyle}
-          center={MOSQUE_POSITION}
-          zoom={15}
-          options={options}
-        >
-          <Marker
-            position={MOSQUE_POSITION}
-            title="Association Mosquée de Thonon"
-          />
-        </GoogleMap>
-      </LoadScript>
-    );
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
@@ -120,13 +29,100 @@ export default function Contact() {
 
         {/* Map Section */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-          <div className="h-[400px] relative">
-            {renderMap()}
+          <div className="aspect-w-16 aspect-h-9 h-[400px]">
+            {/* Static Map Fallback */}
+            <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center p-6">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Association Mosquée de Thonon</h3>
+                <p className="text-gray-600">Avenue de Champagne, 74200 Thonon-les-Bains</p>
+              </div>
+              <a 
+                href="https://www.google.com/maps/place/Association+Mosqu%C3%A9e+de+Thonon/@46.3714039,6.4706116,17z/data=!3m1!4b1!4m6!3m5!1s0x478c3f2e2a405af5:0x7f7f1d43a7c69232!8m2!3d46.3714039!4d6.4731865!16s%2Fg%2F11c5_0_5m3?entry=ttu" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-primary-green text-white px-4 py-2 rounded hover:bg-secondary-green transition-colors"
+              >
+                Voir sur Google Maps
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Contact Information */}
-        <ContactInfo />
+        {/* Contact Form */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="p-8">
+            <div className="mb-8">
+              <h3 className="text-xl font-bodrum mb-4">Informations de Contact</h3>
+              <div className="space-y-4 text-gray-600">
+                <p>
+                  <strong>Adresse :</strong> Avenue de Champagne, 74200 Thonon-les-Bains
+                </p>
+                <p>
+                  <strong>Email :</strong> contact@mosqueedethonon.fr
+                </p>
+                <p>
+                  <strong>Téléphone :</strong> 01 23 45 67 89
+                </p>
+              </div>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={4}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                />
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                >
+                  Envoyer le message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );
