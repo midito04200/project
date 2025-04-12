@@ -2,23 +2,23 @@ import { useState } from 'react';
 
 const images = [
   {
-    url: '/images/new-mosque.jpg',
+    url: '/images/ccc01.jpeg',
     title: 'Nouvelle Mosquée',
     description: 'Vue d\'ensemble du projet de la nouvelle mosquée'
   },
   {
-    url: '/images/new-mosque-1.jpg',
+    url: '/images/new-ccc02.jpeg',
     title: 'Façade Principale',
     description: 'Vue de la façade principale de la nouvelle mosquée'
   },
   {
-    url: '/images/new-mosque-2.jpg',
+    url: '/images/new-ccc03.jpeg',
     title: 'Vue Latérale',
     description: 'Perspective latérale du projet'
   },
   {
-    url: '/images/new-mosque-sketch.jpg',
-    title: 'Esquisse Architecturale',
+    url: '/images/ccc-pancarte-01-.jpeg',
+    title: 'Pancarte',
     description: 'Plan architectural de la future mosquée'
   }
 ];
