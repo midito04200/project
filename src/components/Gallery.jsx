@@ -7,19 +7,19 @@ const images = [
     description: 'Vue d\'ensemble du projet de la nouvelle mosquée'
   },
   {
-    url: '/images/new-ccc02.jpeg',
+    url: '/images/ccc02.jpeg',
     title: 'Façade Principale',
     description: 'Vue de la façade principale de la nouvelle mosquée'
   },
   {
-    url: '/images/new-ccc03.jpeg',
+    url: '/images/ccc03.jpeg',
     title: 'Vue Latérale',
     description: 'Perspective latérale du projet'
   },
   {
     url: '/images/ccc-pancarte-01-.jpeg',
     title: 'Pancarte',
-    description: 'Plan architectural de la future mosquée'
+    description: 'Pancarte du futir centre culturel'
   }
 ];
 

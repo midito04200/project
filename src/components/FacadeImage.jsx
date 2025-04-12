@@ -6,7 +6,7 @@ export default function FacadeImage() {
   return (
     <div className="relative group cursor-pointer">
       <img
-        src="/new-mosque-1.jpg"
+        src="/images/new-ccc02.jpeg'"
         alt="Façade du Centre culturel du chablais"
         className="w-full h-auto rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
         onError={() => setImageError(true)}
