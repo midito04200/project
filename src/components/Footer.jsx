@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="text-gray-300">
               Avenue de Champagne<br />
               74200 Thonon-les-Bains<br />
-              Email: contact@mosqueedethonon.fr<br />
+              Email: mosqueeamtthonon@gmail.com<br />
               Téléphone: 01 23 45 67 89
             </p>
           </div>
