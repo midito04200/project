@@ -2,22 +2,22 @@ import { useState } from 'react';
 
 const images = [
   {
-    url: '/new-mosque.jpg',
+    url: '/images/new-mosque.jpg',
     title: 'Nouvelle Mosquée',
     description: 'Vue d\'ensemble du projet de la nouvelle mosquée'
   },
   {
-    url: '/new-mosque-1.jpg',
+    url: '/images/new-mosque-1.jpg',
     title: 'Façade Principale',
     description: 'Vue de la façade principale de la nouvelle mosquée'
   },
   {
-    url: '/new-mosque-2.jpg',
+    url: '/images/new-mosque-2.jpg',
     title: 'Vue Latérale',
     description: 'Perspective latérale du projet'
   },
   {
-    url: '/new-mosque-sketch.jpg',
+    url: '/images/new-mosque-sketch.jpg',
     title: 'Esquisse Architecturale',
     description: 'Plan architectural de la future mosquée'
   }
@@ -49,7 +49,7 @@ export default function Gallery() {
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -63,7 +63,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Modal */}
       {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
