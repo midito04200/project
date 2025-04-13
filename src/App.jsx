@@ -24,12 +24,13 @@ function App() {
         <section id="activites">
           <Activities />
         </section>
-        <section id="galerie">
-          <Gallery />
-        </section>
         <section id="projet-mosquee">
           <NewMosqueProject />
         </section>
+        <section id="galerie">
+          <Gallery />
+        </section>
+        
         <section id="faire-un-don">
           <Donation />
         </section>

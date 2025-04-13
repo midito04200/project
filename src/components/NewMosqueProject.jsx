@@ -10,10 +10,9 @@ export default function NewMosqueProject() {
         {/* Decorative Icon */}
         <div className="flex justify-center mb-8">
           <svg className="w-16 h-16 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+            {/* SVG content */}
           </svg>
         </div>
-        <h2 className="text-4xl font-bold mb-4">Centre Culturel du Chablais</h2>
       </div>
 
       {/* First Section */}
@@ -27,12 +26,16 @@ export default function NewMosqueProject() {
           </div>
           <div className="flex-1">
             <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">Image à venir</span>
+              <img
+                src="/images/placeholder-image.jpg"
+                alt="Centre Culturel du Chablais"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
       </div>
-
+      s
       {/* Donation Section */}
       <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,12 +43,12 @@ export default function NewMosqueProject() {
             <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
             <p className="text-xl text-gray-600">Soutenez notre projet de centre culturel</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Bank Transfer Section */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold mb-8 text-primary-green">Par virement bancaire</h2>
-              
+
               <div className="space-y-8">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Titulaire du compte</h3>
@@ -77,7 +80,7 @@ export default function NewMosqueProject() {
             {/* Credit Card Section */}
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
-              
+
               <div className="space-y-8">
                 <p className="text-xl">
                   Scannez le QR code ci-dessous pour faire<br />
@@ -86,7 +89,7 @@ export default function NewMosqueProject() {
 
                 <div className="flex justify-center">
                   <div className="p-4 bg-white rounded-lg shadow-md border-2 border-primary-green/20">
-                    <img 
+                    <img
                       src={qrCodeUrl}
                       alt="QR Code SumUp"
                       className="w-64 h-64"
@@ -169,7 +172,7 @@ export default function NewMosqueProject() {
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 <svg className="w-12 h-12 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2zm-4 4h2v2h-2zm0-4h2v2h-2zm-4 8h2v2H9zm0-8h2v2H9zm10-6H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                  <path d="M17 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2zm-4 4h2v2h-2zm0-4h2v2h-2zm-4 8h2v2H9zm0-8h2v2H9zm10-6H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2">Surface totale</h4>
@@ -181,7 +184,7 @@ export default function NewMosqueProject() {
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 <svg className="w-12 h-12 text-primary-green" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2">Capacité d'accueil</h4>
