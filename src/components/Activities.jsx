@@ -21,25 +21,25 @@ export default function Activities() {
       id: 1,
       title: "Cours d'Arabe",
       description: "Apprenez la langue arabe avec nos cours adaptés à tous les niveaux.",
-      icon: '<img src="/images/amt.svg" alt="Cours d\'Arabe Icon" />', // Replaced with amt.svg
+      icon: '<img src="/images/amt01.jpeg alt="Cours d\'Arabe Icon" />', // Replaced with amt.svg
     },
     {
       id: 2,
       title: "Cours de Coran",
-      description: "Découvrez et mémorisez les versets du Coran avec nos enseignants qualifiés.",
-      icon: '<img src="/images/amt.svg" alt="Cours de Coran Icon" />', // Replaced with amt.svg
+      description: "Découvrez et mémorisez les versets du Coran avec nos enseignants qualifiés.",              
+      icon: '<img src="/public/images/association01.jpeg" alt="Cours de Coran Icon" />', // Replaced with amt.svg
     },
     {
       id: 3,
       title: "Conférences Islamiques",
       description: "Participez à des conférences enrichissantes sur divers sujets islamiques.",
-      icon: '<img src="/images/amt.svg" alt="Conférences Islamiques Icon" />', // Replaced with amt.svg
+      icon: '<img src="/public/images/amt01.jpeg" alt="Conférences Islamiques Icon" />', // Replaced with amt.svg
     },
     {
       id: 4,
       title: "Activités Jeunesse",
       description: "Des activités éducatives et ludiques pour les jeunes de la communauté.",
-      icon: '<img src="/images/amt.svg" alt="Activités Jeunesse Icon" />', // Replaced with amt.svg
+      icon: '<img src="/images/amt01.jpeg" alt="Activités Jeunesse Icon" />', // Replaced with amt.svg
     },
   ];
 
