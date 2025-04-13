@@ -1,8 +1,7 @@
 import React from 'react';
 
 export default function NewMosqueProject() {
-  const sumupLink = "https://sumup.link/amt-thonon";
-  const qrCodeUrl = `https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=${encodeURIComponent(sumupLink)}`;
+  const qrCodeUrl = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https%3A%2F%2Fsumup.link%2Famt-thonon";
 
   return (
     <div className="py-20">
@@ -97,7 +96,7 @@ export default function NewMosqueProject() {
 
                 <div className="flex justify-center">
                   <a
-                    href={sumupLink}
+                    href="https://sumup.link/amt-thonon"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-primary-green text-white px-8 py-3 rounded-lg hover:bg-secondary-green transition-colors duration-300"
