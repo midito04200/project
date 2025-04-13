@@ -30,23 +30,20 @@ export default function Contact() {
         {/* Map Section */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
           <div className="aspect-w-16 aspect-h-9 h-[400px]">
-            {/* Static Map Fallback */}
-            <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center p-6">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Association Mosquée de Thonon</h3>
-                <p className="text-gray-600">Avenue de Champagne, 74200 Thonon-les-Bains</p>
-              </div>
-              <a 
-                href="https://www.google.com/maps/place/Association+Mosqu%C3%A9e+de+Thonon/@46.3714039,6.4706116,17z/data=!3m1!4b1!4m6!3m5!1s0x478c3f2e2a405af5:0x7f7f1d43a7c69232!8m2!3d46.3714039!4d6.4731865!16s%2Fg%2F11c5_0_5m3?entry=ttu" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-primary-green text-white px-4 py-2 rounded hover:bg-secondary-green transition-colors"
-              >
-                Voir sur Google Maps
-              </a>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.3646489176935!2d6.4706476!3d46.3713716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3f2e2a405af5%3A0x7f7f1d43a7c69232!2s2%20Av.%20de%20Champagne%2C%2074200%20Thonon-les-Bains%2C%20France!5e0!3m2!1sfr!2sch!4v1712917581742!5m2!1sfr!2sch"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
+
+
 
         {/* Contact Form */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -60,7 +57,7 @@ export default function Contact() {
                 <p>
                   <strong>Email :</strong>mosqueeamtthonon@gmail.com</p>
                 <p>
-                  <strong>Téléphone :</strong> 01 23 45 67 89
+                  <strong>Téléphone :</strong> +33666474681
                 </p>
               </div>
             </div>
