@@ -3,7 +3,7 @@ import { useState } from 'react';
 const images = [
   {
     url: '/images/ccc01.jpeg',
-    title: 'Nouvelle Mosquée',
+    title: 'Nouveau Centre culturel du Chablais ',
     description: 'Vue d\'ensemble du projet de la nouvelle mosquée'
   },
   {
@@ -19,7 +19,7 @@ const images = [
   {
     url: '/images/ccc-pancarte-01-.jpeg',
     title: 'Pancarte',
-    description: 'Pancarte du futir centre culturel'
+    description: 'Pancarte du futur centre culturel avec Mr le directeur de la mosquée'
   }
 ];
 
@@ -34,7 +34,7 @@ export default function Gallery() {
             Notre Projet de Mosquée
           </h2>
           <p className="text-xl text-gray-600">
-            Découvrez les images du projet de notre future mosquée
+            Découvrez les images du projet de notre futur centre culturel et mosquée
           </p>
         </div>
 
