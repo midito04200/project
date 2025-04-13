@@ -43,26 +43,25 @@ export default function Contact() {
           </div>
         </div>
 
-
-
         {/* Contact Form */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-8">
-            <div className="mb-8">
-              <h3 className="text-xl font-bodrum mb-4">Informations de Contact</h3>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  <strong>Adresse :</strong> Avenue de Champagne, 74200 Thonon-les-Bains
+          <div className="p-6">
+            <div className="mb-6">
+              <h3 className="text-lg font-bodrum mb-3">Informations de Contact</h3>
+              <div className="space-y-2 text-gray-600 text-sm">
+                <p key="address">
+                  <strong>Adresse :</strong> 2 Avenue de Champagne, 74200 Thonon-les-Bains
                 </p>
-                <p>
-                  <strong>Email :</strong>mosqueeamtthonon@gmail.com</p>
-                <p>
+                <p key="email">
+                  <strong>Email :</strong> mosqueeamtthonon@gmail.com
+                </p>
+                <p key="phone">
                   <strong>Téléphone :</strong> +33666474681
                 </p>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Nom
@@ -74,7 +73,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 text-sm"
                 />
               </div>
 
@@ -89,7 +88,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 text-sm"
                 />
               </div>
 
@@ -100,20 +99,20 @@ export default function Contact() {
                 <textarea
                   name="message"
                   id="message"
-                  rows={4}
+                  rows={3}
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 text-sm"
                 />
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                 >
-                  Envoyer le message
+                  Envoyer
                 </button>
               </div>
             </form>

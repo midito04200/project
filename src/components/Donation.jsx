@@ -10,44 +10,47 @@ export default function Donation() {
           <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
           <p className="text-xl text-gray-600">Soutenez notre mosquée et contribuez à nos projets</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Bank Transfer Section */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-8 text-primary-green">Par virement bancaire</h2>
-            
-            <div className="space-y-8">
+            <h2 className="text-2xl font-bold mb-6 text-primary-green">Par virement bancaire</h2>
+
+            <div className="space-y-4 md:space-y-8">
               <div>
-                <h3 className="text-lg font-semibold mb-2">Titulaire du compte</h3>
-                <p className="text-xl">ASSOC. LES MUSULMANS DE THONON</p>
+                <h3 className="text-lg font-semibold mb-1">Titulaire du compte</h3>
+                <p className="text-xl leading-snug md:leading-normal">ASSOC. LES MUSULMANS DE THONON</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">Banque</h3>
-                <p className="text-xl">CA DES SAVOIE - THONON CONCORDE</p>
+                <h3 className="text-lg font-semibold mb-1">Banque</h3>
+                <p className="text-xl leading-snug md:leading-normal">CA DES SAVOIE - THONON CONCORDE</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">IBAN</h3>
-                <p className="text-xl font-mono">FR76 1810 6000 4896 7237 7517 275</p>
+                <h3 className="text-lg font-semibold mb-1">IBAN</h3>
+                <p className="text-xl font-mono leading-snug md:leading-normal">FR76 1810 6000 4896 7237 7517 275</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">BIC/SWIFT</h3>
-                <p className="text-xl font-mono">AGRIFRPP881</p>
+                <h3 className="text-lg font-semibold mb-1">BIC/SWIFT</h3>
+                <p className="text-xl font-mono leading-snug md:leading-normal">AGRIFRPP881</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">Adresse</h3>
-                <p className="text-xl">2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS</p>
+                <h3 className="text-lg font-semibold mb-1">Adresse</h3>
+                <p className="text-xl leading-snug md:leading-normal">
+                  2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS
+                </p>
               </div>
             </div>
           </div>
 
+
           {/* Credit Card Section */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
-            
+
             <div className="space-y-8">
               <p className="text-xl">
                 Scannez le QR code ci-dessous pour faire<br />
@@ -56,7 +59,7 @@ export default function Donation() {
 
               <div className="flex justify-center">
                 <div className="p-4 bg-white rounded-lg shadow-md border-2 border-primary-green/20">
-                  <img 
+                  <img
                     src={qrCodeUrl}
                     alt="QR Code SumUp"
                     className="w-64 h-64"
