@@ -51,20 +51,8 @@ export default function Contact() {
 
         {/* Map Section */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-          <div className="aspect-w-16 aspect-h-9 h-[400px]" id="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.3646489176935!2d6.4706476!3d46.3713716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3f2e2a405af5%3A0x7f7f1d43a7c69232!2s2%20Av.%20de%20Champagne%2C%2074200%20Thonon-les-Bains%2C%20France!5e0!3m2!1sfr!2sch!4v1712917581742!5m2!1sfr!2sch"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
-            ></iframe>
-          </div>
+          <div className="aspect-w-16 aspect-h-9 h-[400px]" id="map"></div>
         </div>
-
 
         {/* Contact Form */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
