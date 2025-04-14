@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Conférence",
+    "date": "05.05.2025",
+    "description": "Une conférence sur les valeurs islamiques.",
+    "type": "Conférence"
+  },
+  {
+    "id": 2,
+    "title": "Cours de Coran",
+    "date": "06.05.2025",
+    "description": "Cours pour apprendre et mémoriser le Coran.",
+    "type": "Cours"
+  },
+  {
+    "id": 3,
+    "title": "Sortie en groupe à Europapark",
+    "date": "07.05.2025",
+    "description": "Sortie en groupe en famille à Europapark.",
+    "type": "Sortie" 
+  }
+ ]

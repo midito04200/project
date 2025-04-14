@@ -17,6 +17,7 @@ export default {
         'amiri': ['Amiri', 'serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
+        'noto-kufi': ['Noto Kufi Arabic', 'sans-serif'],
       },
     },
   },

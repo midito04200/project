@@ -2,24 +2,24 @@ import { useState } from 'react';
 
 const images = [
   {
-    url: '/images/ccc01.jpeg',
+    url: '/images/ccc01.webp',
     title: 'Nouveau Centre culturel du Chablais ',
     description: 'Vue d\'ensemble du projet de la nouvelle mosquée'
   },
   {
-    url: '/images/ccc02.jpeg',
+    url: '/images/ccc02.webp',
     title: 'Façade Principale',
     description: 'Vue de la façade principale de la nouvelle mosquée'
   },
   {
-    url: '/images/ccc03.jpeg',
+    url: '/images/ccc03.webp',
     title: 'Vue Latérale',
     description: 'Perspective latérale du projet'
   },
   {
-    url: '/images/ccc-pancarte-01-.jpeg',
+    url: '/images/ccc-pancarte-01-.webp',
     title: 'Pancarte',
-    description: 'Pancarte du futur centre culturel avec Mr le directeur de la mosquée'
+    description: 'Presentation du futur centre culturel par Mr le directeur de la mosquée'
   }
 ];
 
@@ -31,10 +31,10 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-amiri text-primary-green mb-4">
-            Notre Projet de Mosquée
+            Nouveau Centre Culturel du Chablais
           </h2>
           <p className="text-xl text-gray-600">
-            Découvrez les images du projet de notre futur centre culturel et mosquée
+            Découvrez les images du projet de votre futur centre culturel et mosquée
           </p>
         </div>
 

@@ -27,7 +27,7 @@ export default function NewMosqueProject() {
           <div className="flex-1">
             <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
               <img
-                src="/images/placeholder-image.jpg"
+                src="/images/eskizze.webp"
                 alt="Centre Culturel du Chablais"
                 className="w-full h-full object-cover rounded-lg"
               />

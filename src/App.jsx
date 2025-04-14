@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Activities from './components/Activities'
+import Events from './components/Events'
 import Gallery from './components/Gallery'
 import NewMosqueProject from './components/NewMosqueProject'
 import Donation from './components/Donation'
@@ -23,15 +24,15 @@ function App() {
         </section>
         <section id="activites">
           <Activities />
+          <Events />
+          <section id="galerie">
+          <Gallery />
+        </section>
         </section>
         <section id="projet-mosquee">
           <NewMosqueProject />
-        </section>
-        <section id="galerie">
-          <Gallery />
-        </section>
-        
-        <section id="faire-un-don">
+        </section>       
+         <section id="faire-un-don">
           <Donation />
         </section>
         <section id="contact">

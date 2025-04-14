@@ -14,7 +14,7 @@ export default function About() {
         <div className="flex-1">
           <div className="bg-gray-200 w-full h-full rounded-lg flex items-center justify-center">
             <img
-              src="/public/images/CCC-generated-Image01.png"
+              src="/images/CCC-generated-Image01.webp"
               alt="À propos de l'Association Mosquée de Thonon"
               className="rounded-lg object-cover w-full h-full"
             />
@@ -42,7 +42,7 @@ export default function About() {
         <div className="flex-1">
           <div className="bg-gray-200 w-full h-full rounded-lg flex items-center justify-center">
             <img
-              src="/public/images/association01.jpeg"
+              src="images/association01.webp"
               alt="Nos Activités"
               className="rounded-lg object-cover w-full h-full"
             />
