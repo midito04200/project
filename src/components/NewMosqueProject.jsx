@@ -35,84 +35,6 @@ export default function NewMosqueProject() {
           </div>
         </div>
       </div>
-      s
-      {/* Donation Section */}
-      <div className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
-            <p className="text-xl text-gray-600">Soutenez notre projet de centre culturel</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Bank Transfer Section */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-8 text-primary-green">Par virement bancaire</h2>
-
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Titulaire du compte</h3>
-                  <p className="text-xl">ASSOC. LES MUSULMANS DE THONON</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Banque</h3>
-                  <p className="text-xl">CA DES SAVOIE - THONON CONCORDE</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">IBAN</h3>
-                  <p className="text-xl font-mono">FR76 1810 6000 4896 7237 7517 275</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">BIC/SWIFT</h3>
-                  <p className="text-xl font-mono">AGRIFRPP881</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Adresse</h3>
-                  <p className="text-xl">2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Credit Card Section */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
-
-              <div className="space-y-8">
-                <p className="text-xl">
-                  Scannez le QR code ci-dessous pour faire<br />
-                  un don sécurisé par carte bancaire via SumUp
-                </p>
-
-                <div className="flex justify-center">
-                  <div className="p-4 bg-white rounded-lg shadow-md border-2 border-primary-green/20">
-                    <img
-                      src={qrCodeUrl}
-                      alt="QR Code SumUp"
-                      className="w-64 h-64"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex justify-center">
-                  <a
-                    href="https://sumup.link/amt-thonon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-primary-green text-white px-8 py-3 rounded-lg hover:bg-secondary-green transition-colors duration-300"
-                  >
-                    Faire un don avec SumUp
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Second Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
@@ -124,7 +46,11 @@ export default function NewMosqueProject() {
           </div>
           <div className="flex-1">
             <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">Image à venir</span>
+              <img
+                src="/images/unlieudesavoir.webp"
+                alt="Un Lieu de Savoir"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -146,24 +72,6 @@ export default function NewMosqueProject() {
           </div>
         </div>
       </div>
-
-      {/* Fourth Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
-          <div className="flex-1">
-            <h3 className="text-3xl font-bold mb-6">Un Engagement pour l'Avenir</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Ce projet est une réponse à un besoin réel et un engagement pour l'avenir. Ensemble, construisons un lieu où chaque personne pourra pratiquer sa foi avec dignité, apprendre, échanger et s'épanouir pleinement dans un environnement propice à la paix et à la fraternité.
-            </p>
-          </div>
-          <div className="flex-1">
-            <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">Image à venir</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Statistics Section */}
       <div className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

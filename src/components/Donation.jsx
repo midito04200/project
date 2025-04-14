@@ -8,15 +8,15 @@ export default function Donation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
-          <p className="text-xl text-gray-600">Soutenez notre mosquée et contribuez à nos projets</p>
+          <p className="text-xl text-gray-600">Soutenez notre association et contribuez à notre project pour construire le Centre Culturel du chablais</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Bank Transfer Section */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-primary-green">Par virement bancaire</h2>
 
-            <div className="space-y-4 md:space-y-8">
+            <div className="space-y-4 md:space-y-2">
               <div>
                 <h3 className="text-lg font-semibold mb-1">Titulaire du compte</h3>
                 <p className="text-xl leading-snug md:leading-normal">ASSOC. LES MUSULMANS DE THONON</p>

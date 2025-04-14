@@ -51,7 +51,7 @@ export default function About() {
       </div>
 
       {/* Nos Objectifs Section */}
-      <div className="bg-primary-green text-white py-16 -mx-4 sm:-mx-6 lg:-mx-8">
+      <div className="bg-primary-green/80 text-white py-16 -mx-4 sm:-mx-6 lg:-mx-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Decorative Icon */}
           <div className="flex justify-center mb-8">
