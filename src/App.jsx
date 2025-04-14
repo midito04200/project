@@ -8,7 +8,7 @@ import Gallery from './components/Gallery'
 import NewMosqueProject from './components/NewMosqueProject'
 import Donation from './components/Donation'
 import Contact from './components/Contact'
-import Newsletter from './components/Newsletter'
+
 import Footer from './components/Footer'
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <section id="about">
           <About />
         </section>
-        <section id="activites">         
+        <section id="activities">
           <Activities />
           <section id="galerie">
             <Gallery />
@@ -37,7 +37,6 @@ function App() {
         <section id="contact">
           <Contact />
         </section>
-        <Newsletter />
       </main>
       <Footer />
     </div>

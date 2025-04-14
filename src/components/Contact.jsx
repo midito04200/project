@@ -8,25 +8,35 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    // Load the Google Maps script dynamically
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AlzaSyBGarT49cDBO3-l1gu9ALEtLqO21LWmYE&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
+    // Check if the Google Maps script is already added
+    if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AlzaSyBGarT49cDBO3-l1gu9ALEtLqO21LWmYE&callback=initMap`;
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
 
-    // Initialize the map once the script is loaded
-    window.initMap = () => {
-      new window.google.maps.Map(document.getElementById('map'), {
-        center: { lat: 46.3713716, lng: 6.4706476 }, // Coordinates for Thonon-les-Bains
-        zoom: 15,
-      });
-    };
+      // Initialize the map once the script is loaded
+      window.initMap = () => {
+        new window.google.maps.Map(document.getElementById('map'), {
+          center: { lat: 46.3713716, lng: 6.4706476 }, // Coordinates for Thonon-les-Bains
+          zoom: 15,
+        });
+      };
 
-    return () => {
-      // Cleanup script if the component unmounts
-      document.body.removeChild(script);
-    };
+      return () => {
+        // Cleanup script if the component unmounts
+        document.body.removeChild(script);
+      };
+    } else {
+      // If the script is already loaded, initialize the map directly
+      if (window.google && window.google.maps) {
+        new window.google.maps.Map(document.getElementById('map'), {
+          center: { lat: 46.3713716, lng: 6.4706476 }, // Coordinates for Thonon-les-Bains
+          zoom: 15,
+        });
+      }
+    }
   }, []);
 
   const handleSubmit = (e) => {
