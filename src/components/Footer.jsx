@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <p className="text-gray-300">
-              Avenue de Champagne<br />
+              2 Avenue de Champagne<br />
               74200 Thonon-les-Bains<br />
               Email: mosqueeamtthonon@gmail.com<br />
               Téléphone: +33666474681
