@@ -31,6 +31,7 @@ function App() {
         <section id="projet-mosquee">
           <NewMosqueProject />
         </section>
+        
         <section id="faire-un-don">
           <Donation />
         </section>
