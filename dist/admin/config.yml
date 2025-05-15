@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "prayer-times"
+    label: "Horaires de Prière"
+    folder: "content/prayer-times"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Fajr", name: "fajr", widget: "string"}
+      - {label: "Dohr", name: "dohr", widget: "string"}
+      - {label: "Asr", name: "asr", widget: "string"}
+      - {label: "Maghrib", name: "maghrib", widget: "string"}
+      - {label: "Icha", name: "icha", widget: "string"}
+
+  - name: "events"
+    label: "Événements"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+
+  - name: "activities"
+    label: "Activités"
+    folder: "content/activities"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Icône", name: "icon", widget: "string"}
+
+  - name: "mosque-project"
+    label: "Centre Culturel du Chablais"
+    folder: "content/mosque-project"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Surface", name: "surface", widget: "string"}
+      - {label: "Capacité", name: "capacity", widget: "string"}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Description", name: "description", widget: "string"}

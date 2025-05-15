@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/mosque-icon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMT - Association Musulmans de Thonon</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK2TKYRECV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-RK2TKYRECV');
+  </script>
+  <script type="module" crossorigin src="/assets/index-a5hUXnY0.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-B8nDAMKl.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-B4cXVNFc.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
