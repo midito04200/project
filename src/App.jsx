@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import PrayerTimes from './components/PrayerTimesSection'
 import About from './components/About'
 import Activities from './components/Activities'
 
@@ -16,9 +17,8 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <main>
-        <section id="home">
-          <Home />
-        </section>
+        <section id="home"> <Home /> </section>
+        <section id="PrayerTimes"> <PrayerTimes /> </section>
         <section id="about">
           <About />
         </section>
