@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import DonationSlider from './DonationSlider';
-import PrayerTimesSection from './PrayerTimesSection';
+// Removed unused import
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -58,11 +58,8 @@ export default function Home() {
           >
             FAIRE UN DON
           </button>
+          </div>
         </div>
       </div>
-
-      {/* Prayer Times Section */}
-      <PrayerTimesSection />
-    </div>
   );
 }
