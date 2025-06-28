@@ -6,13 +6,7 @@ export default function PrayerTimesSection() {
       <DonationSlider opacity={0.85} />
       <div className="relative z-10">
         <div className="w-full h-[600px] rounded-lg overflow-hidden">
-          <iframe
-            title="Mawaqit Prayer Times"
-            src="https://mawaqit.net/fr/w/amt-mosquee-as-sahaba-thonon-les-bains-74200-france?showOnly5PrayerTimes=0"
-            frameBorder="0"
-            scrolling="no"
-            className="w-full h-full"
-          ></iframe>
+          <iframe src="https://mawaqit.net/fr/w/thonon?showOnly5PrayerTimes=0" frameborder="0" scrolling="no" class="widget"></iframe>
         </div>
       </div>
     </div>
