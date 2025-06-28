@@ -3,7 +3,7 @@ export default function PrayerTimes() {
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 text-white">
-          HORAIRES DES PRIÈRES (15°)
+          HORAIRES DES PRIÈRES
         </h2>
       </div>
 
