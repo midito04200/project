@@ -7,9 +7,11 @@ export default function Navbar() {
   const navigation = [
     { name: 'Accueil', href: '#home' },
     { name: 'À propos', href: '#about' },
-    { name: 'Activités', href: '#activites' },
-    //{ name: 'Galerie', href: '#galerie' },
-    { name: 'Projet Centre Culturel', href: '#galerie' },
+    //{ name: 'Activités', href: '#activites' },
+    { name: 'Horaires des prières', href: '#horaires' },
+   // { name: 'Événements', href: '#evenements' },
+    { name: 'Dons', href: '#donations' },
+    { name: 'Centre Culturel du Chablais', href: '#galerie' },
     { name: 'Contact', href: '#contact' },
   ]
 
