@@ -12,42 +12,18 @@ export default function Donation() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Bank Transfer Section */}
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6 text-primary-green">Par virement bancaire</h2>
-
-            <div className="space-y-4 md:space-y-2">
-              <div>
-                <h3 className="text-lg font-semibold mb-1">Titulaire du compte</h3>
-                <p className="text-xl leading-snug md:leading-normal">ASSOC. LES MUSULMANS DE THONON</p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-1">Banque</h3>
-                <p className="text-xl leading-snug md:leading-normal">CA DES SAVOIE - THONON CONCORDE</p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-1">IBAN</h3>
-                <p className="text-xl font-mono leading-snug md:leading-normal">FR76 1810 6000 4896 7237 7517 275</p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-1">BIC/SWIFT</h3>
-                <p className="text-xl font-mono leading-snug md:leading-normal">AGRIFRPP881</p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-1">Adresse</h3>
-                <p className="text-xl leading-snug md:leading-normal">
-                  2 AVENUE DE CHAMPAGNE<br />74200 THONON LES BAINS
-                </p>
-              </div>
-            </div>
+          {/* Cotizup Section */}
+          <div className="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center">
+            <h2 className="text-2xl font-bold mb-6 text-primary-green">Par Cotizup</h2>
+            <iframe
+              src="https://www.cotizup.com/nouvelle-mosquee-thonon"
+              title="Cotizup - Nouvelle Mosquée Thonon"
+              width="100%"
+              height="600"
+              className="rounded-lg border-2 border-primary-green/20"
+              allow="payment *"
+            ></iframe>
           </div>
-
-
-          {/* Credit Card Section */}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
 
