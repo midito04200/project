@@ -15,11 +15,6 @@ const images = [
     url: '/images/ccc03.webp',
     title: 'Vue Latérale',
     description: 'Perspective latérale du projet'
-  },
-  {
-    url: '/images/ccc-pancarte-01-.webp',
-    title: 'Pancarte',
-    description: 'Presentation du futur centre culturel par Mr le directeur de la mosquée'
   }
 ];
 
