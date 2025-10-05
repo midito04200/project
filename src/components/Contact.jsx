@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="w-full h-[600px]">
           <iframe
-            title="AMT - Thonon map"
+            title="AMT-Thonon Localisation"
             src={embedSrc}
             width="100%"
             height="100%"
