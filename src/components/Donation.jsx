@@ -1,62 +1,61 @@
 import React from 'react';
 
 export default function Donation() {
-  const qrCodeUrl = "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https%3A%2F%2Fsumup.link%2Famt-thonon";
+  const qrCodeUrl =
+    'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https%3A%2F%2Fsumup.link%2Famt-thonon';
 
   return (
-    <div id="faire-un-don" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Faire un don</h2>
-          <p className="text-xl text-gray-600">Soutenez notre association et contribuez à notre project pour construire le Centre Culturel du chablais</p>
-        </div>
+    <section id="donations" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12 font-montserrat">
+      <div className="bg-[#2D6A4F] rounded-2xl overflow-hidden shadow-lg">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 px-8 py-12">
+          {/* Left: Icon + Title */}
+          <div className="flex-1 text-center md:text-left text-white">
+            <div className="flex justify-center md:justify-start mb-4">
+              <svg className="w-14 h-14 text-[#95D5B2]" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16v2H4z" fill="currentColor" opacity="0.08" />
+                <path d="M12 2l7 5v5a7 7 0 01-14 0V7l7-5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Cotizup Section */}
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-center">
-            <h2 className="text-2xl font-bold mb-6 text-primary-green">Par Cotizup</h2>
-            <iframe
-              src="https://www.cotizup.com/nouvelle-mosquee-thonon"
-              title="Cotizup - Nouvelle Mosquée Thonon"
-              width="100%"
-              height="600"
-              className="rounded-lg border-2 border-primary-green/20"
-              allow="payment *"
-            ></iframe>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-8 text-primary-green">Par carte bancaire</h2>
+            <h3 className="text-2xl md:text-3xl font-amiri font-bold text-white mb-6">
+              Par virement bancaire
+            </h3>
 
-            <div className="space-y-8">
-              <p className="text-xl">
-                Scannez le QR code ci-dessous pour faire<br />
-                un don sécurisé par carte bancaire via SumUp
-              </p>
-
-              <div className="flex justify-center">
-                <div className="p-4 bg-white rounded-lg shadow-md border-2 border-primary-green/20">
-                  <img
-                    src={qrCodeUrl}
-                    alt="QR Code SumUp"
-                    className="w-64 h-64"
-                  />
-                </div>
+            <div className="space-y-6 text-white/95 text-base md:text-lg">
+              <div>
+                <div className="text-sm uppercase font-semibold tracking-wide">Titulaire du compte</div>
+                <div className="mt-1 font-medium">ASSOC. LES MUSULMANS DE THONON</div>
               </div>
 
-              <div className="flex justify-center">
-                <a
-                  href="https://sumup.link/amt-thonon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-primary-green text-white px-8 py-3 rounded-lg hover:bg-secondary-green transition-colors duration-300"
-                >
-                  Faire un don avec SumUp
-                </a>
+              <div>
+                <div className="text-sm uppercase font-semibold tracking-wide">Banque</div>
+                <div className="mt-1 font-medium">CA DES SAVOIE - THONON CONCORDE</div>
+              </div>
+
+              <div>
+                <div className="text-sm uppercase font-semibold tracking-wide">IBAN</div>
+                <div className="mt-1 font-medium">FR76 1810 6000 4896 7237 7517 275</div>
+              </div>
+
+              <div>
+                <div className="text-sm uppercase font-semibold tracking-wide">BIC / SWIFT</div>
+                <div className="mt-1 font-medium">AGRIFRPP881</div>
+              </div>
+
+              <div>
+                <div className="text-sm uppercase font-semibold tracking-wide">Adresse</div>
+                <div className="mt-1 font-medium">
+                  2 AVENUE DE CHAMPAGNE<br />
+                  74200 THONON LES BAINS
+                </div>
               </div>
             </div>
           </div>
+
+          
+          
         </div>
       </div>
-    </div>
+    </section>
   );
 }
