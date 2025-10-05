@@ -47,11 +47,9 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 text-white text-center px-4 max-w-4xl mx-auto mt-24">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            L'Association des Musulmans<br />de Thonon
+            Association des Musulmans<br />de Thonon-les-Bains
           </h1>
-          <p className="text-2xl md:text-3xl mb-12">
-            vous accueille pour les cinq prières quotidiennes
-          </p>
+          
           <button
             onClick={scrollToDonation}
             className="hero-button bg-[#E6C86E] text-primary-green px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#d4b75d] transition-colors duration-300"

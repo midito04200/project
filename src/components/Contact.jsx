@@ -1,6 +1,36 @@
-import { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+const GMAPS_SCRIPT_ID = 'gmaps-js';
+const API_KEY = 'AlzaSyBGarT49cDBO3-l1gu9ALEtLqO21LWmYE'; // verify in Google Console
+
+function loadGoogleMaps(key) {
+  if (typeof window === 'undefined') return Promise.reject(new Error('no-window'));
+  if (window.google && window.google.maps) return Promise.resolve(window.google.maps);
+
+  const existing = document.getElementById(GMAPS_SCRIPT_ID) || document.querySelector('script[src*="maps.googleapis.com"]');
+  if (existing) {
+    return new Promise((resolve, reject) => {
+      if (window.google && window.google.maps) return resolve(window.google.maps);
+      existing.addEventListener('load', () => (window.google && window.google.maps) ? resolve(window.google.maps) : reject(new Error('google-maps-not-available')));
+      existing.addEventListener('error', () => reject(new Error('google-maps-load-error')));
+    });
+  }
+
+  const script = document.createElement('script');
+  script.id = GMAPS_SCRIPT_ID;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${key}`; // no callback param
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+
+  return new Promise((resolve, reject) => {
+    script.onload = () => (window.google && window.google.maps) ? resolve(window.google.maps) : reject(new Error('google-maps-not-available'));
+    script.onerror = (e) => reject(new Error('google-maps-load-error'));
+  });
+}
 
 export default function Contact() {
+  const mapRef = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -8,35 +38,34 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    // Check if the Google Maps script is already added
-    if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AlzaSyBGarT49cDBO3-l1gu9ALEtLqO21LWmYE&callback=initMap`;
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
+    let mounted = true;
 
-      // Initialize the map once the script is loaded
-      window.initMap = () => {
-        new window.google.maps.Map(document.getElementById('map'), {
-          center: { lat: 46.3713716, lng: 6.4706476 }, // Coordinates for Thonon-les-Bains
-          zoom: 15,
-        });
-      };
+    loadGoogleMaps(API_KEY)
+      .then((maps) => {
+        if (!mounted) return;
+        const el = mapRef.current;
+        if (!el) {
+          console.warn('Contact: map element not found');
+          return;
+        }
+        // create map only once
+        if (!el.__mapInitialized) {
+          new maps.Map(el, {
+            center: { lat: 46.3713716, lng: 6.4706476 },
+            zoom: 15
+          });
+          el.__mapInitialized = true;
+        }
+      })
+      .catch((err) => {
+        // show useful info in console for troubleshooting (InvalidKeyMapError will appear too)
+        console.error('Google Maps load error:', err.message || err);
+      });
 
-      return () => {
-        // Cleanup script if the component unmounts
-        document.body.removeChild(script);
-      };
-    } else {
-      // If the script is already loaded, initialize the map directly
-      if (window.google && window.google.maps) {
-        new window.google.maps.Map(document.getElementById('map'), {
-          center: { lat: 46.3713716, lng: 6.4706476 }, // Coordinates for Thonon-les-Bains
-          zoom: 15,
-        });
-      }
-    }
+    return () => {
+      mounted = false;
+      // do NOT remove the script tag here (prevents multiple load cycles)
+    };
   }, []);
 
   const handleSubmit = (e) => {
@@ -61,7 +90,7 @@ export default function Contact() {
 
         {/* Map Section */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-          <div className="aspect-w-16 aspect-h-9 h-[400px]" id="map"></div>
+          <div id="map" ref={mapRef} className="w-full h-[500px]" />
         </div>
 
       </div>
