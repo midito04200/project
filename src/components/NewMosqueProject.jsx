@@ -67,7 +67,11 @@ export default function NewMosqueProject() {
           </div>
           <div className="flex-1">
             <div className="bg-gray-200 w-full aspect-4/3 rounded-lg flex items-center justify-center">
-              <span className="text-gray-400">Image à venir</span>
+              <img
+                src="/ressources/conference.webp"
+                alt="Conference"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
