@@ -39,7 +39,7 @@ export default function Footer() {
             <div className="flex items-center space-x-4">
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/p/Mosqu%C3%A9e-Al-Sahaba-Thonon-AMT-100063646355222/?locale=fr_FR"
+                href="https://www.facebook.com/share/14J57RZPsgQ/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
