@@ -1,3 +1,7 @@
+/**
+ * PrayerTimesSection displays an embedded iframe with the prayer times for the mosque.
+ * This component renders a styled section containing the Mawaqit prayer times widget.
+ */
 export default function PrayerTimesSection() {
   return (
     <section id="horaires" className="relative py-20">
@@ -7,8 +11,7 @@ export default function PrayerTimesSection() {
             <iframe
               title="Mawaqit Prayer Times"
               src="https://mawaqit.net/fr/w/amt-mosquee-as-sahaba-thonon-les-bains-74200-france?showOnly5PrayerTimes=0"
-              frameBorder="0"
-              scrolling="no"
+              style={{ border: 0, overflow: 'hidden' }}
               loading="lazy"
               className="w-full h-full"
             ></iframe>

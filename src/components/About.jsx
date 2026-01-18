@@ -8,7 +8,7 @@ export default function About() {
             Qui somme nous ?
           </h2>
           <p className="text-gray-600">
-            L'Association Mosquée de Thonon est un lieu de culte et de rassemblement pour la communauté musulmane de Thonon-les-Bains, dédié à la prière, l'apprentissage et le partage. Depuis sa création, elle répond aux besoins spirituels et sociaux des fidèles en proposant des services variés : prières quotidiennes, école coranique, cours d'arabe, célébrations religieuses, et accompagnement spirituel.
+            La Mosquée AS-SAHABA de Thonon est un lieu de culte et de rassemblement pour la communauté musulmane de Thonon-les-Bains, dédié à la prière, l'apprentissage et le partage. Depuis sa création, elle répond aux besoins spirituels et sociaux des fidèles en proposant des services variés : prières quotidiennes, école coranique, cours d'arabe, célébrations religieuses, et accompagnement spirituel.
           </p>
         </div>
         <div className="flex-1">
