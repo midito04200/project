@@ -30,7 +30,8 @@ export default function Navbar() {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center space-x-2">
               <img
-                src="/images/amt.svg"
+                //src="/images/amt.svg"
+                src="/images/newlogo.webp"
                 alt="AMT Logo"
                 className="h-10 w-10 object-contain"
               />

@@ -47,7 +47,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 text-white text-center px-4 max-w-4xl mx-auto mt-24">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Mosquee AS-SAHABA<br />de Thonon-les-Bains
+            MOSQUEE AS-SAHABA<br />de Thonon-les-Bains
           </h1>
           
           <button
