@@ -12,7 +12,7 @@ export default function Footer() {
             />
             <div>
               <h3 className="text-lg font-semibold mb-2 text-white">
-                Association Musulmans de Thonon
+                Mosquee AS-SAHABA Thonon-les-Bains
               </h3>
               <p className="text-gray-300">
                 Un lieu de culte et de rassemblement pour la communauté musulmane de Thonon-les-Bains.
